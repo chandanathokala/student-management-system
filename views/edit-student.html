@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Edit Student | Student Management System</title>
+
+
+    <!-- Main CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <!-- Layout CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/layout.css"
+    >
+
+    <!-- Dashboard CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+
+    <style>
+
+        /* =========================================
+           EDIT FORM CARD
+        ========================================= */
+
+        .form-section {
+
+            background: white;
+
+            max-width: 750px;
+
+            margin: 0 auto;
+
+            padding: 35px;
+
+            border-radius: 14px;
+
+            box-shadow:
+                0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+
+        /* =========================================
+           FORM
+        ========================================= */
+
+        #editStudentForm {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+
+        /* =========================================
+           FULL WIDTH FIELDS
+        ========================================= */
+
+        #editStudentForm
+        .form-group:first-child,
+
+        #editStudentForm
+        .form-group:nth-child(2),
+
+        #editStudentForm
+        .form-group:nth-child(5),
+
+        #editStudentForm
+        .form-group:nth-child(6) {
+
+            grid-column: span 2;
+        }
+
+
+        /* =========================================
+           FORM GROUP
+        ========================================= */
+
+        #editStudentForm
+        .form-group {
+
+            margin-bottom: 0;
+        }
+
+
+        /* =========================================
+           LABEL
+        ========================================= */
+
+        #editStudentForm label {
+
+            color: #334155;
+
+            font-size: 14px;
+
+            font-weight: 600;
+        }
+
+
+        /* =========================================
+           INPUTS
+        ========================================= */
+
+        #editStudentForm input,
+
+        #editStudentForm select {
+
+            width: 100%;
+
+            padding: 13px 14px;
+
+            border: 1px solid #cbd5e1;
+
+            border-radius: 8px;
+
+            font-size: 15px;
+
+            background: white;
+
+            color: #1e293b;
+
+            outline: none;
+
+            transition: 0.2s;
+        }
+
+
+        /* =========================================
+           FOCUS
+        ========================================= */
+
+        #editStudentForm input:focus,
+
+        #editStudentForm select:focus {
+
+            border-color: #2563eb;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(37, 99, 235, 0.12);
+        }
+
+
+        /* =========================================
+           UPDATE BUTTON
+        ========================================= */
+
+        #editStudentForm
+        .submit-btn {
+
+            grid-column: span 2;
+
+            width: 100%;
+
+            padding: 13px;
+
+            margin-top: 5px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #1e3a8a,
+                    #2563eb
+                );
+
+            color: white;
+
+            border: none;
+
+            border-radius: 8px;
+
+            font-size: 15px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+
+        #editStudentForm
+        .submit-btn:hover {
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 6px 15px
+                rgba(37, 99, 235, 0.25);
+        }
+
+
+        /* =========================================
+           BACK BUTTON
+        ========================================= */
+
+        #backBtn {
+
+            background: white;
+
+            color: #1e3a8a;
+
+            border: none;
+
+            padding: 10px 16px;
+
+            border-radius: 7px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+
+        #backBtn:hover {
+
+            background: #dbeafe;
+
+            transform: translateY(-1px);
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 700px) {
+
+            .form-section {
+
+                width: 95%;
+
+                padding: 22px;
+            }
+
+
+            #editStudentForm {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            #editStudentForm
+            .form-group:first-child,
+
+            #editStudentForm
+            .form-group:nth-child(2),
+
+            #editStudentForm
+            .form-group:nth-child(5),
+
+            #editStudentForm
+            .form-group:nth-child(6) {
+
+                grid-column: span 1;
+            }
+
+
+            #editStudentForm
+            .submit-btn {
+
+                grid-column: span 1;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+
+    <header class="navbar">
+
+        <h1>
+            🎓 Student Management System
+        </h1>
+
+
+        <button id="backBtn">
+            ← Back
+        </button>
+
+    </header>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main class="container">
+
+
+        <section class="page-heading">
+
+            <h2>
+                Edit Student
+            </h2>
+
+            <p>
+                Update the student's information.
+            </p>
+
+        </section>
+
+
+
+        <!-- =====================================
+             EDIT FORM
+        ====================================== -->
+
+        <section class="form-section">
+
+
+            <form id="editStudentForm">
+
+
+                <!-- NAME -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Student Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter student name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter email address"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- PHONE -->
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="phone"
+                        placeholder="Enter phone number"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- AGE -->
+
+                <div class="form-group">
+
+                    <label for="age">
+                        Age
+                    </label>
+
+                    <input
+                        type="number"
+                        id="age"
+                        placeholder="Enter age"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- COURSE -->
+
+                <div class="form-group">
+
+                    <label for="course">
+                        Course
+                    </label>
+
+                    <select
+                        id="course"
+                        required
+                    >
+
+                        <option value="CSE">
+                            CSE
+                        </option>
+
+                        <option value="ECE">
+                            ECE
+                        </option>
+
+                        <option value="IT">
+                            IT
+                        </option>
+
+                        <option value="EEE">
+                            EEE
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- CITY -->
+
+                <div class="form-group">
+
+                    <label for="city">
+                        City
+                    </label>
+
+                    <input
+                        type="text"
+                        id="city"
+                        placeholder="Enter city"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- UPDATE -->
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+                    ✓ Update Student
+                </button>
+
+
+            </form>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script
+        type="module"
+        src="../js/editStudent.js"
+    ></script>
+
+
+    <!-- BACK BUTTON -->
+
+    <script>
+
+        document
+            .getElementById("backBtn")
+            .addEventListener(
+                "click",
+                function () {
+
+                    window.location.href =
+                        "index.html";
+
+                }
+            );
+
+    </script>
+
+
+</body>
+
+</html>
