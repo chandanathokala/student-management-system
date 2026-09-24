@@ -1,0 +1,58 @@
+{
+  "students": [
+    {
+      "name": "Arjun Reddy",
+      "email": "arjun@gmail.com",
+      "phone": "9876543212",
+      "age": 20,
+      "course": "CSE",
+      "city": "Bangalore",
+      "id": 3
+    },
+    {
+      "name": "chandana",
+      "email": "chandanathokala697@gmail.com",
+      "phone": "7993979166",
+      "age": 20,
+      "course": "CSE",
+      "city": "guntur",
+      "id": 5
+    },
+    {
+      "name": "eleena ",
+      "email": "eleena@gmail.com",
+      "phone": "8688863889",
+      "age": 20,
+      "course": "CSE",
+      "city": "Hyderabad",
+      "id": 6
+    },
+    {
+      "name": "lasya",
+      "email": "lasya@gmail.com",
+      "phone": "9898989898",
+      "age": 23,
+      "course": "CSE",
+      "city": "tirupati",
+      "id": 7
+    },
+    {
+      "name": "suneria",
+      "email": "sun@gmail.com",
+      "phone": "9879879879",
+      "age": 21,
+      "course": "IT",
+      "city": "goa",
+      "id": 8
+    },
+    {
+      "name": "kajal",
+      "email": "kaj@gmail.com",
+      "phone": "98765445654",
+      "age": 20,
+      "course": "CSE",
+      "city": "guntur",
+      "id": 9
+    }
+  ]
+}
