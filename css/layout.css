@@ -1,0 +1,281 @@
+/* =========================================
+   LAYOUT CSS
+   Student Management System
+========================================= */
+
+
+/* =========================================
+   MAIN PAGE LAYOUT
+========================================= */
+
+main {
+    width: 100%;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+    width: 92%;
+    max-width: 1300px;
+    margin: 35px auto;
+}
+
+
+/* =========================================
+   PAGE HEADING
+========================================= */
+
+.page-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+
+/* =========================================
+   CONTENT SECTIONS
+========================================= */
+
+section {
+    width: 100%;
+}
+
+
+/* =========================================
+   FLEXIBLE CONTROLS
+========================================= */
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================================
+   TABLE WRAPPER
+========================================= */
+
+.table-section {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+/* =========================================
+   FORM LAYOUT
+========================================= */
+
+.form-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 35px auto;
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   FORM LABEL
+========================================= */
+
+.form-group label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   FORM INPUTS
+========================================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 11px 13px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    background: white;
+}
+
+
+/* =========================================
+   FORM INPUT FOCUS
+========================================= */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =========================================
+   FORM BUTTON AREA
+========================================= */
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   GENERAL CARD
+========================================= */
+
+.card {
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================================
+   DETAILS GRID
+========================================= */
+
+.details-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+/* =========================================
+   DETAIL ITEM
+========================================= */
+
+.detail-item {
+    background: #f8fafc;
+
+    padding: 18px;
+
+    border-radius: 8px;
+
+    border: 1px solid #e2e8f0;
+}
+
+
+/* =========================================
+   DETAIL LABEL
+========================================= */
+
+.detail-item strong {
+    display: block;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    margin-bottom: 6px;
+}
+
+
+/* =========================================
+   DETAIL VALUE
+========================================= */
+
+.detail-item span {
+    color: #1e293b;
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-btn {
+    display: inline-block;
+
+    text-decoration: none;
+
+    background: #e2e8f0;
+
+    color: #334155;
+
+    padding: 10px 16px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+
+.back-btn:hover {
+    background: #cbd5e1;
+}
+
+
+/* =========================================
+   RESPONSIVE LAYOUT
+========================================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .form-container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+}
