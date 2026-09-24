@@ -1,0 +1,423 @@
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    background: linear-gradient(
+        135deg,
+        #1e3a8a,
+        #2563eb
+    );
+
+    color: white;
+
+    padding: 20px 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+.navbar h1 {
+    font-size: 25px;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   ADD STUDENT BUTTON
+========================================= */
+
+#addStudentBtn {
+    background: white;
+
+    color: #1e3a8a;
+
+    border: none;
+
+    padding: 11px 18px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+#addStudentBtn:hover {
+    background: #dbeafe;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.container {
+    width: 92%;
+
+    max-width: 1300px;
+
+    margin: 35px auto;
+}
+
+
+/* =========================================
+   PAGE HEADING
+========================================= */
+
+.page-heading {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+
+.page-heading h2 {
+    color: #1e3a8a;
+
+    font-size: 28px;
+
+    margin-bottom: 8px;
+}
+
+
+.page-heading p {
+    color: #64748b;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   SEARCH + FILTER CONTROLS
+========================================= */
+
+.controls {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+
+/* SEARCH INPUT */
+
+#searchInput {
+    flex: 1;
+
+    padding: 12px 15px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+#searchInput:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* COURSE FILTER */
+
+#courseFilter {
+    width: 200px;
+
+    padding: 12px 15px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    background: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    outline: none;
+}
+
+
+#courseFilter:focus {
+    border-color: #2563eb;
+}
+
+
+/* =========================================
+   TABLE SECTION
+========================================= */
+
+.table-section {
+    background: white;
+
+    border-radius: 12px;
+
+    overflow-x: auto;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 900px;
+}
+
+
+/* TABLE HEADER */
+
+thead {
+    background: #1e3a8a;
+
+    color: white;
+}
+
+
+th {
+    padding: 15px 12px;
+
+    text-align: left;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* TABLE BODY */
+
+td {
+    padding: 14px 12px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    font-size: 14px;
+
+    color: #334155;
+}
+
+
+/* ROW HOVER */
+
+tbody tr {
+    transition: 0.2s;
+}
+
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.view-btn,
+.edit-btn,
+.delete-btn {
+    border: none;
+
+    padding: 7px 11px;
+
+    border-radius: 6px;
+
+    margin-right: 5px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+
+/* VIEW */
+
+.view-btn {
+    background: #dbeafe;
+
+    color: #1d4ed8;
+}
+
+
+.view-btn:hover {
+    background: #bfdbfe;
+}
+
+
+/* EDIT */
+
+.edit-btn {
+    background: #fef3c7;
+
+    color: #92400e;
+}
+
+
+.edit-btn:hover {
+    background: #fde68a;
+}
+
+
+/* DELETE */
+
+.delete-btn {
+    background: #fee2e2;
+
+    color: #b91c1c;
+}
+
+
+.delete-btn:hover {
+    background: #fecaca;
+}
+
+
+/* =========================================
+   EMPTY TABLE MESSAGE
+========================================= */
+
+tbody td[colspan] {
+    padding: 35px;
+
+    color: #64748b;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 18px 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        align-items: stretch;
+    }
+
+
+    .navbar h1 {
+        text-align: center;
+
+        font-size: 21px;
+    }
+
+
+    #addStudentBtn {
+        width: 100%;
+    }
+
+
+    .container {
+        width: 95%;
+
+        margin: 20px auto;
+    }
+
+
+    .page-heading {
+        padding: 20px;
+    }
+
+
+    .page-heading h2 {
+        font-size: 23px;
+    }
+
+
+    .controls {
+        flex-direction: column;
+    }
+
+
+    #courseFilter {
+        width: 100%;
+    }
+
+}
